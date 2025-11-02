@@ -44,6 +44,58 @@ gg.jte.usePrecompiledTemplates=true
 server.port=8081
 ```
 
-# How to build and run
+## How to build and run
 
-## Clone the repository:
+### Clone the repository:
+
+```
+git clone git@github.com:dmitrii-russu-sendbox/jte-springboot-jar-demo.git
+cd jte-springboot-jar-demo
+```
+
+### Compile templates and build production JAR:
+
+```
+./mvnw compile
+./mvnw package -Pprod
+```
+
+### Run application:
+
+```
+java -jar target/jte-springboot-jar-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+```
+
+### Or run in development mode:
+
+```
+./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+```
+
+### Maven Profiles
+
+### Defined in pom.xml:
+
+```
+<profiles>
+    <profile>
+        <id>dev</id>
+        <properties>
+            <spring.profiles.active>dev</spring.profiles.active>
+        </properties>
+    </profile>
+
+    <profile>
+        <id>prod</id>
+        <properties>
+            <spring.profiles.active>prod</spring.profiles.active>
+        </properties>
+    </profile>
+</profiles>
+```
+
+### Troubleshooting
+- Templates not found
+
+Make sure templates are precompiled and gg.jte.usePrecompiledTemplates=true in production mode.
+
