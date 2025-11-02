@@ -44,6 +44,6 @@ gg.jte.usePrecompiledTemplates=true
 server.port=8081
 ```
 
-## How to build and run
+# How to build and run
 
-### Clone the repository:
+## Clone the repository:
