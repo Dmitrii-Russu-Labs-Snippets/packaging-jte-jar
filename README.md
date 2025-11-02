@@ -30,3 +30,20 @@ spring.application.name=jte-springboot-jar-demo
 gg.jte.developmentMode=true
 gg.jte.usePrecompiledTemplates=false
 server.port=8081
+```
+
+### Production (`prod`)
+
+Used for building and running optimized JAR with precompiled templates.
+
+```properties
+# application-prod.properties
+spring.application.name=jte-springboot-jar-demo
+gg.jte.developmentMode=false
+gg.jte.usePrecompiledTemplates=true
+server.port=8081
+```
+
+##How to build and run
+
+###Clone the repository:
