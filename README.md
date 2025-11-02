@@ -99,3 +99,4 @@ java -jar target/jte-springboot-jar-demo-0.0.1-SNAPSHOT.jar --spring.profiles.ac
 
 Make sure templates are precompiled and gg.jte.usePrecompiledTemplates=true in production mode.
 
+https://github.com/danvega/jte-production/tree/master
